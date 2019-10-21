@@ -18,4 +18,6 @@ class KorpaTest {
         }// ovaj sad provjerava da li smo dodali prvi element, a s tim da su ostali null
     }
 
+
+
 }
