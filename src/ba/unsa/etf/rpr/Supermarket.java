@@ -2,8 +2,8 @@ package ba.unsa.etf.rpr;
 
 public class Supermarket {
 
-    Artikl[] artikli = new Artikl[1000];
-    int broj_el = 0;
+    private Artikl[] artikli = new Artikl[1000];
+    private int broj_el = 0;
 
     public Artikl[] getArtikli() { return artikli; }    // ova funkcija vraca niz artikala, tj. sve artikleu supermarketu
 
@@ -14,7 +14,7 @@ public class Supermarket {
 
     public Artikl izbaciArtiklSaKodom(String kod) { // ovo izbacuje iz supermarketa artikl, a vraca isti taj artikl koji ce ubaciti u korpu
         for (int i = 0; i < broj_el; i++) {
-            if (artikli[i].kod.equals(kod)) {
+            if (artikli[i].getKod().equals(kod)) {
                 Artikl temp = new Artikl(artikli[i].naziv, artikli[i].cijena, artikli[i].kod);
                 for (int j = i; j < broj_el-1; j++) artikli[j] = artikli[j+1];
                 broj_el = broj_el - 1;
